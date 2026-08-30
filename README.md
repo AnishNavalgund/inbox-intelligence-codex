@@ -13,8 +13,6 @@ It answers:
 
 The workflow is strictly read-only. It does not delete, archive, label, send, mark, or unsubscribe from email.
 
-> **Early beta:** review the privacy notes and test with a fresh Codex conversation before relying on the results.
-
 ## What is included
 
 - A reusable `inbox-intelligence` Codex skill
@@ -22,16 +20,13 @@ The workflow is strictly read-only. It does not delete, archive, label, send, ma
 - A normalized subscription-stream schema
 - Classification and scoring guidance
 - A simplified private dashboard specification
-- Fictional demo data with no real inbox information
-- Privacy, testing, and demo-video documentation
 
 ## Requirements
 
 - Codex with access to the Gmail app for the accounts you want to analyze
 - Sites if you want a hosted interactive dashboard
-- Permission to create local task artifacts
 
-Connector availability and permissions depend on the user's own ChatGPT/Codex environment. This repository does not contain Gmail credentials or provide a Gmail API server.
+Make sure the Codex app has the Gmail plugin installed and the email is connected. Same with Sites.
 
 ## Install locally
 
@@ -71,24 +66,6 @@ Organization → Subscription stream → Receiving Gmail account
 ```
 
 This keeps editorial newsletters, product announcements, saved alerts, receipts, and system notifications from being incorrectly merged.
-
-## Privacy
-
-The repository contains only fictional sample data. The plugin runs no analytics server and collects no inbox data itself. Gmail content is accessed through the user's own connected app and processed within their own Codex workflow.
-
-Read [PRIVACY.md](PRIVACY.md) before testing or sharing a generated dashboard.
-
-## Test before publishing
-
-Follow [TESTING.md](TESTING.md). Keep the repository private until static validation, a fresh-conversation test, and a personal-data audit all pass.
-
-## Demo
-
-The no-voice, one-minute product-demo storyboard is in [docs/demo-storyboard.md](docs/demo-storyboard.md).
-
-## Project status
-
-The initial beta focuses on accurate inventory construction and a clear Subscriptions / Newsletters dashboard. It intentionally does not perform Gmail cleanup actions.
 
 ## License
 
