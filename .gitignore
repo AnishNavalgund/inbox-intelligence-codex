@@ -1,0 +1,20 @@
+# Local secrets and connector configuration
+.env
+.env.*
+!.env.example
+
+# Generated private inbox artifacts
+data/
+output/
+recordings/
+inbox-intelligence-data.json
+inbox-intelligence-private.json
+*.local.json
+
+# Build and editor artifacts
+node_modules/
+dist/
+.next/
+.DS_Store
+Thumbs.db
+*.log

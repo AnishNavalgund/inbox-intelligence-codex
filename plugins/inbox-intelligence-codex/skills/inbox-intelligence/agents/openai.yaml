@@ -1,0 +1,8 @@
+interface:
+  display_name: "Inbox Intelligence"
+  short_description: "Map subscriptions across connected Gmail accounts"
+  brand_color: "#4F46E5"
+  default_prompt: "Use $inbox-intelligence to analyze my connected Gmail accounts read-only and build a private subscriptions dashboard."
+
+policy:
+  allow_implicit_invocation: true
