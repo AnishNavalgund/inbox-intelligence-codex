@@ -72,7 +72,3 @@ Organization → Subscription stream → Receiving Gmail account
 ```
 
 This keeps editorial newsletters, product announcements, saved alerts, receipts, and system notifications from being incorrectly merged.
-
-## License
-
-MIT © 2026 Anish Navalgund
