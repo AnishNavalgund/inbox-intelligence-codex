@@ -15,8 +15,7 @@ The workflow is strictly read-only. It does not delete, archive, label, send, ma
 
 ## What is included
 
-- A reusable `inbox-intelligence` Codex skill
-- A repository-local Codex marketplace for installation and testing
+- A standalone, reusable `inbox-intelligence` Codex skill
 - A normalized subscription-stream schema
 - Classification and scoring guidance
 - A simplified private dashboard specification
@@ -28,13 +27,20 @@ The workflow is strictly read-only. It does not delete, archive, label, send, ma
 
 Make sure the Codex app has the Gmail plugin installed and the email is connected. Same with Sites.
 
-## Install locally
+## Install
 
-Clone the repository, then from its root:
+Ask Codex to install the skill directly from GitHub:
+
+```text
+$skill-installer Install the Inbox Intelligence skill from https://github.com/AnishNavalgund/inbox-intelligence-codex/tree/main/skills/inbox-intelligence
+```
+
+Or clone the repository and copy `skills/inbox-intelligence` into your Codex skills directory:
 
 ```bash
-codex plugin marketplace add .
-codex plugin add inbox-intelligence-codex@inbox-intelligence
+git clone https://github.com/AnishNavalgund/inbox-intelligence-codex.git
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R inbox-intelligence-codex/skills/inbox-intelligence "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Start a **new Codex conversation** after installation so the skill is discovered.
