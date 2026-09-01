@@ -62,13 +62,3 @@ $inbox-intelligence Create a read-only master subscription inventory from all co
 ```text
 $inbox-intelligence Enrich the existing inventory with subscription age, probable origin, value, noise, protection, and recommendations. Do not rebuild it.
 ```
-
-## Data model
-
-Inbox Intelligence does not assume that a sender address equals a subscription. It organizes recurring email as:
-
-```text
-Organization → Subscription stream → Receiving Gmail account
-```
-
-This keeps editorial newsletters, product announcements, saved alerts, receipts, and system notifications from being incorrectly merged.
