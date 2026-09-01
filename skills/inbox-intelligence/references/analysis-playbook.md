@@ -23,6 +23,17 @@ Treat Gmail categories as signals, not labels. A receipt in Promotions is still 
 
 Page through enough results to capture recurring senders across the window. Stop expanding a candidate when its stream identity, recent count, annual count, and classification are supported; do not read every message from a high-volume sender.
 
+### Connector search fallback
+
+Do not conclude that an inbox or time window is empty from a summary-style email search alone. If a search unexpectedly returns no messages, or its result count conflicts with label totals or another equivalent query:
+
+1. Verify the account has mail using read-only label counts such as `INBOX`.
+2. Repeat the query with message-ID search and pagination.
+3. Read only the returned messages' metadata needed for classification; do not fetch message bodies by default.
+4. Treat the ID-based result as authoritative when the summary and ID paths disagree, and record the connector discrepancy as a coverage limitation.
+
+Only report an empty result after the broad ID-based check also returns no messages. Keep all fallback queries account-specific and within the same read-only safety boundary.
+
 ## 3. Split organizations into streams
 
 Group aliases at the organization level, then separate meaningful purposes. Subject patterns, sender local parts, list headers, cadence, and content descriptions can distinguish streams.
